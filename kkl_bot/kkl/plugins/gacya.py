@@ -5,7 +5,7 @@ import random as rd
 from PIL import Image
 import os
 root=os.path.join(os.path.dirname(__file__),'plus','image')
-os.chdir(root)
+
 bot=nonebot.get_bot()
 master = bot.config.MASTER[0]
 
@@ -111,7 +111,7 @@ async def gacya(session: CommandSession):
     a=0
     for x in range(5):
         for y in range(2):
-            pic=Image.open(result[a])
+            pic=Image.open(root+'\\'+result[a])
 
             background.paste(pic,(x*65+5,y*65+5))
             a+=1
